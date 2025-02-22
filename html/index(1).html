@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost & Found</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Lost & Found</div>
+        <nav>
+            <a href="login.html">Login</a>
+            <a href="#">Help</a>
+            <div class="dropdown">
+                <button class="dropbtn">🌍 Language ▼</button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="changeLanguage('en')">🇺🇸 English</a>
+                    <a href="#" onclick="changeLanguage('es')">🇪🇸 Español</a>
+                    <a href="#" onclick="changeLanguage('fr')">🇫🇷 Français</a>
+                    <a href="#" onclick="changeLanguage('de')">🇩🇪 Deutsch</a>
+                    <a href="#" onclick="changeLanguage('hi')">🇮🇳 हिंदी</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Buttons for Lost and Found Items -->
+   
+
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="script.js"></script>
+    <!-- Buttons for Lost & Found -->
+<div class="button-container">
+    <a href="lost_items.html" class="button lost-button">LOST</a>
+    <a href="found-items.html" class="button found-button">FOUND</a>
+</div>
+
+</body>
+</html>

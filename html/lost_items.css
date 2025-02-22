@@ -1,0 +1,231 @@
+/* General body styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #ffdde1, #8ec5fc); /* Baby pink to sky blue gradient */
+}
+
+/* Container to hold the two columns */
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+/* Left column (Form for Lost Item) */
+.form-column {
+    width: 100%; /* Makes the form take full width */
+}
+
+/* Category dropdown adjustments */
+.categories-column {
+    width: 100%; /* Full width for categories dropdown when moved below */
+    margin-top: 30px;
+    padding: 10px 0;
+}
+
+/* Category dropdown styles */
+.dropdown.categories {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.dropdown-content {
+    display: none;
+    background: white;
+    min-width: 250px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1000;
+    margin: 0 auto;
+}
+
+.dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.sub-dropdown {
+    display: none;
+    padding-left: 20px;
+}
+
+.dropdown-item:hover .sub-dropdown {
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Form styling for Lost Item */
+.form-container {
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Styling for the form labels and inputs */
+#lost-item-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #333;
+}
+
+#lost-item-form input, #lost-item-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+/* Updated larger submit button with gradient background */
+.submit-button {
+    width: 100%;
+    padding: 20px;
+    font-size: 1.5rem; /* Increased font size */
+    color: white;
+    background: linear-gradient(to right, #ff4081, #007aff); /* Gradient pink and blue */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.submit-button:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+/* Submit Button Styling */
+.submit-button {
+    background: linear-gradient(to right, #ff4081, #007aff);  /* Gradient from pink to blue */
+    color: white;
+    padding: 20px 40px; /* Increased padding for a bigger button */
+    font-size: 1.5rem; /* Bigger font size */
+    font-weight: bold;
+    border: none;
+    border-radius: 12px; /* Rounded corners for a smoother look */
+    cursor: pointer;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+/* Hover Effect for Submit Button */
+.submit-button:hover {
+    background: linear-gradient(to right, #007aff, #ff4081);  /* Reverse gradient on hover */
+    transform: scale(1.1); /* Slightly bigger on hover */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
+    opacity: 0.9;  /* Slightly fade */
+}
+
+/* Focused state for accessibility */
+.submit-button:focus {
+    outline: none; /* Remove default outline */
+    border: 2px solid #ff4081; /* Add a pink border for focus */
+}
+
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #ff4081;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #007aff;
+    margin: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #ff4081;
+    transform: scale(1.1);
+}
+
+/* Dropdown Menu */
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: #007aff;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: white;
+    min-width: 150px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #007aff;
+}
+
+.dropdown-content a:hover {
+    background: #ffdde1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Submit Button Styling */
+.submit-button {
+    background: linear-gradient(to right, #ff4081, #007aff);  /* Gradient from pink to blue */
+    color: white;
+    padding: 20px 40px; /* Increased padding for a bigger button */
+    font-size: 1.5rem; /* Bigger font size */
+    font-weight: bold;
+    border: none;
+    border-radius: 12px; /* Rounded corners for a smoother look */
+    cursor: pointer;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+/* Hover Effect for Submit Button */
+.submit-button:hover {
+    background: linear-gradient(to right, #007aff, #ff4081);  /* Reverse gradient on hover */
+    transform: scale(1.1); /* Slightly bigger on hover */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
+    opacity: 0.9;  /* Slightly fade */
+}
+
+/* Focused state for accessibility */
+.submit-button:focus {
+    outline: none; /* Remove default outline */
+    border: 2px solid #ff4081; /* Add a pink border for focus */
+}
+
+
+
