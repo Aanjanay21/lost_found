@@ -18,8 +18,8 @@
                 <button class="dropbtn">🌍 Language ▼</button>
                 <div class="dropdown-content">
                     <a href="#" onclick="changeLanguage('en')">🇺🇸 English</a>
-                    <a href="#" onclick="changeLanguage('es')">🇪🇸 Español</a>
-                    <a href="#" onclick="changeLanguage('fr')">🇫🇷 Français</a>
+                    <a href="#" onclick="changeLanguage('es')">🇪🇸 Español</a>
+                    <a href="#" onclick="changeLanguage('fr')">🇫🇷 Français</a>
                     <a href="#" onclick="changeLanguage('de')">🇩🇪 Deutsch</a>
                     <a href="#" onclick="changeLanguage('hi')">🇮🇳 हिंदी</a>
                 </div>
@@ -27,7 +27,7 @@
         </nav>
     </header>
 
-    <!-- Container holding the form and categories dropdown -->
+    <!-- Container holding the form -->
     <div class="container">
 
         <!-- Left Column: Lost Item Form -->
@@ -55,53 +55,30 @@
 
                     <button type="submit" class="submit-button">Submit</button>
                 </form>
-            </div>
-        </div>
-
-        <!-- Right Column: Categories Dropdown -->
-        <div class="categories-column">
-            <div class="dropdown categories">
-                <button class="dropbtn">📂 Categories ▼</button>
-                <div class="dropdown-content">
-                    <div class="dropdown-item">
-                        <span>📱 Electronics ▶</span>
-                        <div class="sub-dropdown">
-                            <a href="#">Mobile Phones</a>
-                            <a href="#">Earphones & Headphones</a>
-                            <a href="#">Speakers</a>
-                            <a href="#">Laptops</a>
-                        </div>
-                    </div>
-                    <div class="dropdown-item">
-                        <span>✏️ Stationery ▶</span>
-                        <div class="sub-dropdown">
-                            <a href="#">Pens</a>
-                            <a href="#">Notebooks</a>
-                            <a href="#">Books</a>
-                            <a href="#">Stationery Boxes</a>
-                        </div>
-                    </div>
-                    <div class="dropdown-item">
-                        <a href="#">👗 Fashion & Beauty</a>
-                    </div>
-                    <div class="dropdown-item">
-                        <a href="#">⌚ Wearables</a>
-                    </div>
-                    <div class="dropdown-item">
-                        <span>🔑 Others ▶</span>
-                        <div class="sub-dropdown">
-                            <a href="#">Keys</a>
-                            <a href="#">Umbrella</a>
-                            <a href="#">Jewellery</a>
-                            <a href="#">Spectacles</a>
-                        </div>
-                    </div>
-                </div>
+                <p id="message"></p> <!-- Success/Error message -->
             </div>
         </div>
 
     </div> <!-- End of container -->
 
-    <script src="script.js"></script>
+    <script>
+        document.getElementById("lost-item-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            let formData = new FormData(this); // Get form data
+
+            fetch("post_item.php", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("message").innerText = data; // Show response message
+                document.getElementById("lost-item-form").reset(); // Clear form
+            })
+            .catch(error => console.error("Error:", error));
+        });
+    </script>
+
 </body>
 </html>
